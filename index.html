@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+        </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+        </style>    
+</head>
+<body>
+   <section>
+    <header>
+
+        <h1>T O D O</h1>
+      
+      <div onclick="darkMode()">
+          <p> 
+              <img id="icon1" src="images/icon-moon.svg">
+            <img id="icon2" src="images/icon-sun.svg"></p>
+      </div>  
+       
+    </header>
+
+    <form>
+        <button class="todo_button"></button>
+        <input type="text" class="todo_input">
+    </form>
+  
+    <div class="todos_table">
+         <ul class="todo_list"></ul>
+    </div>
+
+    <div class="desktop_navbar">
+         <small class="items" id="count">items left</small>
+         <small>All</small>
+         <small>Active</small>
+         <small>Completed</small>
+         <small class="clear">Clear Completed</small>
+    </div>
+
+    <div class="mobile_table">
+
+        <div id="mobile_bar1" id="nav_bar">
+            <small id="mobileCount">items left</small>
+            <small>Clear Completed</small>
+        </div>
+
+        <div id="mobile_bar2" id="nav_bar">
+             <small>All</small>
+             <small>Active</small>
+             <small>Completed</small>
+        </div>
+    </div>
+
+   </section>
+
+   <script src="js.js"></script>
+</body>
+</html> 

@@ -1,0 +1,583 @@
+/* LIGHT MODE */
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    transition: 0.5s; 
+  }
+  body {
+    margin: 0;
+    background-image: url(images/bg-desktop-light.jpeg);
+    background-repeat: no-repeat;
+    font-size: 18px;
+    background-color: hsl(0, 20%, 94%);
+    font-family: "Josefin Sans", sans-serif;
+  }
+  #icon1{
+    cursor: pointer;
+  }
+  #icon2{
+    display:none;
+  
+  } 
+  
+  header {
+    color: white;
+    display: grid;
+    grid-gap: 265px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 1.5em;
+    word-spacing: 5px;
+    font-family: 700;
+  }
+  form button {
+    border: 1px solid rgb(206, 198, 198);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+  }
+  form button:hover {
+    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-style: solid;
+    border-image-slice: 1;
+    border-radius: 50%;
+  }
+  
+  input {
+    border: 1px hidden;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: 400;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 23px 300px;
+    grid-gap: 10px;
+    border: 1px solid hidden;
+    border-radius: 5px;
+    background-color: white;
+    padding: 17px;
+    width: 465px;
+  }
+  section {
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+  }
+  
+  ul{
+      list-style: none;
+  }
+  .desktop_navbar{
+      border: 1px solid hidden;
+      border-radius: 5px;
+      padding: 17px;
+      background-color: white;
+      width:465px;
+      display:flex;
+      font-size: 17.5px;
+      justify-content: space-between;
+      align-items: center;
+  }
+  small{
+      padding-left: 12px;
+      color:rgb(139, 138, 138);
+  }
+  small:hover{
+      color:black;
+      cursor:pointer;
+  }
+ 
+  .clear:hover{
+      color: rgb(49, 47, 47);
+      cursor:pointer;
+  }
+  .mobile_table{
+    display:none;
+  }
+  /* javascript classes */
+  
+  .todo_list{
+    padding-left: 0;
+    margin-block-end: 0;
+  }
+  .todo{
+    width:465px;
+    border: 1px solid white;
+    border-radius: 5px;
+    border-bottom-color: rgb(206, 198, 198);
+    background-color: white;
+    display:grid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:17px;
+  }
+  .todo_item{
+    text-align: center;
+    padding-left:10px;
+    color:rgb(58, 57, 57);
+  }
+  .todo_item:hover .delete_button{
+    visibility: initial;
+  }
+  .complete_li{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .complete_button{
+    border: 1px solid rgb(206, 198, 198);
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    padding:10px;
+  }
+  .complete_button:hover{
+     border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+     border-style: solid;
+     border-image-slice: 1;
+     border-radius: 50%;
+  }
+  .delete_button{
+    border: 1px hidden rgb(68, 67, 67);
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width:55px;
+    height:25px;
+    display:none;
+  }
+  .todo_list img{
+    pointer-events: none;
+  }
+  .markCompleted{
+    text-decoration:line-through 2px rgb(139, 138, 138);
+  }
+  .markCompleted .complete_button{
+    
+    background: url(images/icon-check.svg) no-repeat center,linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .markCompleted .todo_item{
+    color:rgb(206, 198, 198);
+  }
+  .markCompleted:hover{
+    cursor: pointer;
+  }
+  .markCompleted:hover .delete_button{
+   display: flex;
+  }
+  .todo_item:hover{
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  /* MEDIA QUERIES (RESPONSIVENESS) (LIGHT MODE) */
+  @media only screen and (max-width: 375px){
+       
+     
+    * {
+      box-sizing: border-box;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      max-width: 100%;
+      transition: 0.5s;
+    }
+    body {
+      margin: 0;
+      background-image: url(images/bg-mobile-light.jpeg);
+      background-repeat: no-repeat;
+      font-size: 18px;
+      background-color: hsl(0, 20%, 94%);
+      font-family: "Josefin Sans", sans-serif;
+    }
+    header {
+      color: white;
+      display: grid;
+      grid-gap: 200px;
+      grid-template-columns: auto auto;
+      padding-top: 20px;
+      font-size: 1rem;
+      word-spacing: 3px;
+      font-family: 700;
+      width: 375px;
+      padding-bottom: 20px;
+    }
+    form button {
+      border: 1px solid rgb(206, 198, 198);
+      border-radius: 50%;
+      background-color: white;
+    }
+    form button:hover {
+      border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+      border-style: solid;
+      border-image-slice: 1;
+      border-radius: 50%;
+    }
+    
+    input {
+      border: 1px hidden;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      font-family: 400;
+      width:270px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 23px 300px;
+      grid-gap: 10px;
+      border: 1px solid hidden;
+      border-radius: 5px;
+      background-color: white;
+      padding: 13px;
+      width: 330px;
+      margin-left: 20px;
+      
+    }
+    #icon2{
+        display:none;
+      
+      } 
+    section {
+      display: grid;
+      justify-content: center;
+      grid-gap: 1px;
+    }
+    .desktop_navbar{
+      display:none;
+    }
+    .mobile_table{
+      display:contents;
+    }
+    
+    ul{
+        list-style: none;
+    }
+  
+    small{
+        padding-left: 12px;
+        color:rgb(139, 138, 138);
+    }
+    small:hover{
+        color:black;
+        cursor:pointer;
+    }
+  
+    .clear:hover{
+        color: rgb(49, 47, 47);
+        cursor:pointer;
+    }
+    #mobile_bar1{
+       border: 1px solid hidden;
+        border-radius: 5px;
+        padding: 17px;
+        background-color: white;
+        width:100%;
+        display:flex;
+        width:330px;
+        margin-left: 20px;
+        font-size: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #mobile_bar2{
+        border: 1px solid hidden;
+        border-radius: 5px;
+        padding: 17px;
+        background-color: white;
+        width:100%;
+        display:flex;
+        width:330px;
+        margin-left: 20px;
+        font-size: 15px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .todos_table{
+      width:330px;
+      margin-left:20px;
+    }
+    .todo{
+      padding:12px;
+    }
+   
+  }
+  .todo_item{
+      font-size: 15px;
+  }
+  .markCompleted{
+    text-decoration:line-through 1px rgb(139, 138, 138);
+  }
+  .markCompleted .complete_button{
+    background: url(icon-check.svg) no-repeat center,linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .markCompleted .todo_item{
+    color:rgb(206, 198, 198);
+  }
+  .markCompleted:hover{
+    cursor: pointer;
+  }
+
+
+  /* DARK MODE */
+
+
+  .dark-mode *{
+    transition: 0.5s;
+  }
+  .dark-mode {
+    background-image: url(images/bg-desktop-dark.jpeg);
+    background-repeat: no-repeat;
+    background-color: hsl(235, 21%, 11%);
+  }
+  
+  .dark-mode header {
+    color: white;
+   
+  }
+
+  .dark-mode #icon1{
+     display:none;
+  }
+  .dark-mode #icon2{
+    display:initial;
+    cursor: pointer;
+  }
+
+  .dark-mode form button {
+    border: 1px solid rgb(68, 67, 67);
+    background-color: hsl(235, 24%, 19%);
+  }
+  .dark-mode form button:hover {
+    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-style: solid;
+    border-image-slice: 1;
+    border-radius: 50%;
+  }
+  
+  .dark-mode input {
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(235, 24%, 19%);
+  }
+  .dark-mode form {
+    background-color: hsl(235, 24%, 19%);
+  
+  }
+  
+  .dark-mode .desktop_navbar{
+    background-color: hsl(235, 24%, 19%);
+    
+  }
+  .dark-mode #nav_bar{
+      background-color: hsl(235, 24%, 19%);
+  }
+  .dark-mode small{
+      color:rgb(92, 88, 88);
+  }
+  .dark-mode small:hover{
+      color:white;
+  
+  }
+  
+  
+  .dark-mode .todo{
+    border: 1px solid hsl(235, 24%, 19%);
+    border-bottom-color: rgb(89, 89, 92);
+    background-color: hsl(235, 24%, 19%);
+   
+  }
+  .dark-mode .todo_item{
+    text-align: center;
+    padding-left:15px;
+    color:rgb(240, 235, 235);
+  }
+  .dark-mode .complete_li{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  .dark-mode .complete_button{
+    border: 1px solid rgb(68, 67, 67);
+    background-color: hsl(235, 24%, 19%);
+    
+  }
+  .dark-mode .complete_button:hover{
+     border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+     border-style: solid;
+     border-image-slice: 1;
+     border-radius: 50%;
+  }
+  .dark-mode .delete_button{
+    border: 1px hidden rgb(68, 67, 67);
+    background-color: hsl(235, 24%, 19%);
+  }
+  .dark-mode .todo_list img{
+    pointer-events: none;
+  }
+  .markCompleted{
+    text-decoration:line-through 2px rgb(107, 104, 104);
+  }
+  .markCompleted .complete_button{
+    background: url(images/icon-check.svg) no-repeat center,linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .markCompleted .todo_item{
+    color:rgb(85, 82, 82);
+  }
+  .markCompleted:hover{
+    cursor: pointer;
+  }
+  .markCompleted:hover .delete_button{
+    background: url(images/icon-cross.svg) no-repeat;
+    width:30px;
+    padding-left: 10px;
+  }
+  
+  
+  
+  /* MEDIA QUERIES (RESPONSIVENESS) (LIGHT MODE) */
+  @media only screen and (max-width: 375px){
+    .dark-mode *{
+        transition: 0.5s;
+    }
+   .dark-mode {
+       background-image: url(images/bg-mobile-dark.jpeg);
+       background-repeat: no-repeat;
+       background-color: hsl(235, 21%, 11%);
+     }
+     .dark-mode header {
+       color: white;
+      
+     }
+     .dark-mode form button {
+       border: 1px solid rgb(68, 67, 67);
+       background-color: hsl(235, 24%, 19%);
+     }
+     .dark-mode form button:hover {
+       border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+       border-style: solid;
+       border-image-slice: 1;
+       border-radius: 50%;
+     }
+     
+     .dark-mode input {
+       color: hsl(0, 0%, 98%);
+       background-color: hsl(235, 24%, 19%);
+     }
+     .dark-mode form {
+       background-color: hsl(235, 24%, 19%);
+     
+     }
+     .dark-mode #iconi1{
+       display:none;
+    }
+    .dark-mode #icon1{
+       display:none;
+    }
+    .dark-mode #icon2{
+      display:initial;
+      cursor: pointer;
+    }
+     
+     .dark-mode .desktop_navbar{
+       background-color: hsl(235, 24%, 19%);
+       
+     }
+     .dark-mode #nav_bar{
+         background-color: hsl(235, 24%, 19%);
+     }
+     .dark-mode small{
+         color:rgb(92, 88, 88);
+     }
+     .dark-mode small:hover{
+         color:white;
+     
+     }
+    .dark-mode #mobile_bar1{
+         background-color:hsl(235, 24%, 19%) ;
+     }
+    .dark-mode #mobile_bar2{
+       background-color:hsl(235, 24%, 19%) ;
+   }
+     
+     .dark-mode .todo{
+       border: 1px solid hsl(235, 24%, 19%);
+       border-bottom-color: rgb(89, 89, 92);
+       background-color: hsl(235, 24%, 19%);
+      
+     }
+     .dark-mode .todo_item{
+       text-align: center;
+       padding-left:15px;
+       color:rgb(151, 135, 135);
+     }
+     .dark-mode .complete_li{
+       display:flex;
+       justify-content: space-between;
+       align-items: center;
+     
+     }
+     .dark-mode .complete_button{
+       border: 1px solid rgb(68, 67, 67);
+       background-color: hsl(235, 24%, 19%);
+       
+     }
+     .dark-mode .complete_button:hover{
+        border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+        border-style: solid;
+        border-image-slice: 1;
+        border-radius: 50%;
+     }
+     .dark-mode .delete_button{
+       border: 1px hidden rgb(68, 67, 67);
+       background-color: hsl(235, 24%, 19%);
+     }
+     .dark-mode .todo_list img{
+       pointer-events: none;
+     }
+     .dark-mode .markCompleted{
+       text-decoration:line-through 3px rgb(68, 67, 67);
+     }
+     
+     
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
